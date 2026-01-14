@@ -204,6 +204,19 @@ DATABASES = {
 - Email verification is a placeholder feature (not implemented)
 - ORCID integration is a placeholder feature (not implemented)
 
+## Production Deployment
+
+⚠️ **Important Security Considerations for Production:**
+
+1. **SECRET_KEY**: Set `DJANGO_SECRET_KEY` environment variable with a strong, unique key
+2. **DEBUG**: Set `DEBUG=False` in production
+3. **ALLOWED_HOSTS**: Configure `ALLOWED_HOSTS` with your domain
+4. **Database**: Use PostgreSQL instead of SQLite by setting `USE_SQLITE=false`
+5. **Permissions**: Change REST Framework default permission to `IsAuthenticated` in settings.py
+6. **HTTPS**: Use HTTPS for all communications
+7. **Static Files**: Configure proper static file serving (e.g., with nginx)
+8. **Environment Variables**: Never commit `.env` file with production credentials
+
 ## Future Enhancements
 
 - Implement actual email verification
