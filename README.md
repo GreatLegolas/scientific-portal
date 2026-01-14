@@ -39,9 +39,10 @@ A scientific publication and peer review portal prototype built with Django (bac
 
 **Backend:**
 - Python 3.12
-- Django 4.2.9
+- Django 4.2.26 (security patched)
 - Django REST Framework 3.14.0
 - PostgreSQL (with SQLite fallback for development)
+- Pillow 10.3.0 (security patched)
 
 **Frontend:**
 - React 18
